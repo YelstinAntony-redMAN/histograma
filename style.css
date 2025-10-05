@@ -2,4 +2,54 @@ body{
     font-family: Arial;
     text-align: center;
     margin-top: 50px;
+    background-color: #f4f4f4;/* Un color suave para la página */
+    color: #333;
+}
+
+h1{
+    color: #0056b3; /* Un color azul para el titulo */
+    margin-bottom: 30px;
+}
+
+form{
+    background-color: #ffffff; /* FOndo Blanco para el formulario */
+    margin: 0 auto; /* Centra el formulario horizontalmente */
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    max-width: 500px; /* Ancho máximo del formulario */
+    display: flex; /* Usa flexbox para organizar los elementos */
+    flex-direction: column; /* Elementos en columna */
+    align-items: center; /* Centra los elementos horizontalmente */
+}
+
+label{
+    font-size: 1.1em; /* Tamaño de fuente un poco más grande */
+    margin-bottom: 15px; /* Espacio debajo de la etiqueta */
+    font-weight: bold; /* Texto en negrita */
+}
+
+input[type="file"]{
+    border: 2px solid #007bff; /* Borde azul */
+    padding: 10px; /* Espacio interno */
+    border-radius: 5px; /* Bordes redondeados */
+    margin-bottom: 20px; /* Espacio debajo del input */
+    width: 100%; /* Ocupa todo el ancho disponible */
+    box-sizing: border-box; /* Incluye padding y borde en el ancho */
+    background-color: #e9f7ff; /* Fondo ligeramente azulado */
+    cursor: pointer; /* Cambia el cursor a una mano */
+}
+
+input[type="submit"]{
+    background-color: #007bff; /* Color de fondo azul para el botón */
+    color: white; /* Texto blanco */
+    padding: 12px 25px; /* Espacio interno */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Bordes redondeados */
+    cursor: pointer; /* Cambia el cursor a una mano */
+    font-size: 1em; /* Tamaño de fuente */
+    transition: background-color 0.3s ease; /* Transición suave al pasar el ratón */
+}
+
+input[type="submit"]:hover {
+    background-color: #0056b3; /* Color de fondo más oscuro al pasar el ratón */
 }
