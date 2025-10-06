@@ -1,6 +1,6 @@
-<?php 
+<?php
 
-if (isset($__FILES['imagen'])){
+if (isset($_FILES['imagen'])) {
     $archivo = $_FILES["imagen"]["tmp_name"];
     $info = getimagesize($archivo);
     $tipo = $info["mime"];
@@ -43,10 +43,13 @@ if (isset($__FILES['imagen'])){
         'B' => $histB
     ];
 
-        // Guardar como JSON para JavaScript
-    file_put_contents('histograma.json', json_encode($data));
+    // Guardar el histograma en JSON
+    $ruta_json = __DIR__ . '/histograma.json';
+    if (file_put_contents($ruta_json, json_encode($data)) === false) {
+        die("❌ Error: no se pudo crear el archivo histograma.json en $ruta_json");
+    }
 
-    echo "<h2>Histograma generado</h2>";
+    echo "<h2>✅ Histograma generado correctamente</h2>";
     echo "<canvas id='grafico' width='800' height='400'></canvas>";
     echo "<script src='https://cdn.jsdelivr.net/npm/chart.js'></script>";
     echo "<script src='grafico.js'></script>";
